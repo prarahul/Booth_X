@@ -1,0 +1,4 @@
+- Keep public marketing pages as separate TanStack routes with route-specific metadata, because each campaign capability needs a shareable page.
+- Keep simulator datasets and filtering in a browser-safe shared module; simulations must remain visibly distinct from live campaign data.
+- Store consultation requests through a validated public server function with insert-only access and no public read path, because campaign inquiries contain private contact details.
+- Use Supabase for partner accounts; creating an account must never grant campaign data access automatically.

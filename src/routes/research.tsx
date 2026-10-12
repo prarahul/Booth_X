@@ -1,0 +1,5 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro, ConsultationBanner } from '@/components/booth/shared';
+import { ResearchContent } from '@/components/booth/platform';
+export const Route=createFileRoute('/research')({head:()=>({meta:[{title:'Booth-Level Research — Booth X'},{name:'description',content:'Understand your constituency through verified research and clear, booth-level analytics.'},{property:'og:title',content:'Booth-Level Research — Booth X'},{property:'og:description',content:'Understand your constituency through verified research and clear, booth-level analytics.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:Page});
+function Page(){return <><div className="container-inner"><PageIntro label="Booth-Level Research" title="Ground truth. A decisive advantage." description="Understand your constituency through verified research and clear, booth-level analytics."/></div><ResearchContent/><ConsultationBanner/></>}

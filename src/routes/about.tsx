@@ -1,0 +1,5 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro, ConsultationBanner } from '@/components/booth/shared';
+import { AboutContent } from '@/components/booth/content';
+export const Route=createFileRoute('/about')({head:()=>({meta:[{title:'About Booth X — Booth X'},{name:'description',content:'Field research, ground campaigns, digital communication and intelligence. Working together for leaders across India.'},{property:'og:title',content:'About Booth X — Booth X'},{property:'og:description',content:'Field research, ground campaigns, digital communication and intelligence. Working together for leaders across India.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:Page});
+function Page(){return <><div className="container-inner"><PageIntro label="About Booth X" title="Politics is won on the ground." description="Field research, ground campaigns, digital communication and intelligence. Working together for leaders across India."/></div><AboutContent/><ConsultationBanner/></>}

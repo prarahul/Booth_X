@@ -1,0 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro } from '@/components/booth/shared';
+
+export const Route = createFileRoute('/privacy')({
+  head: () => ({ meta: [{ title: 'Privacy Policy — Booth X' }, { name: 'description', content: 'Your information, handled with care.' }] }),
+  component: Page,
+});
+
+function Page() {
+  return <div className="container-inner legal-page"><PageIntro label="BOOTH X LEGAL" title="Privacy Policy" description="Your information, handled with care." /><section><h2>Information we collect</h2><p>When you request a consultation, we collect the name, contact details, constituency, area of interest and message you submit. Partner sign-in uses your email address and account authentication details.</p></section><section><h2>How information is used</h2><p>Consultation information is used to respond to your request and discuss relevant services. Account information is used to provide partner access. We do not sell consultation information.</p></section><section><h2>Storage and access</h2><p>Consultation submissions and partner accounts are stored securely. Consultation requests are not publicly readable. Access to campaign-specific information requires a separate authorized onboarding process.</p></section><section><h2>Illustrative platform data</h2><p>Public analytics, electoral records and assistant responses on this website are simulated examples, not real voter information. No demographic traits or political leanings are inferred from identifiable people in this preview.</p></section><section><h2>Your choices</h2><p>Only submit information you are authorized to share. You may request correction or deletion by contacting the team through the consultation form. Operational retention periods and official privacy contact details will be confirmed before a live campaign engagement.</p></section><section><h2>Cookies and authentication</h2><p>Partner authentication uses browser storage to maintain your signed-in session. This version does not include advertising trackers.</p></section><section><h2>Policy status</h2><p>This policy describes the current website. Campaign data processing, confidentiality, retention and isolated deployment requirements will be specified separately in your engagement agreement. Last updated: 12 October 2026.</p></section></div>;
+}

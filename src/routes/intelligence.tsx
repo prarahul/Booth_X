@@ -1,0 +1,5 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro, ConsultationBanner } from '@/components/booth/shared';
+import { IntelligenceDemo, MobileDashboard } from '@/components/booth/platform';
+export const Route=createFileRoute('/intelligence')({head:()=>({meta:[{title:'Booth X Intelligence — Booth X'},{name:'description',content:'A connected war room and an accessible intelligence assistant for your campaign operations.'},{property:'og:title',content:'Booth X Intelligence — Booth X'},{property:'og:description',content:'A connected war room and an accessible intelligence assistant for your campaign operations.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:Page});
+function Page(){return <><div className="container-inner"><PageIntro label="Booth X Intelligence" title="Your command centre. Everywhere." description="A connected war room and an accessible intelligence assistant for your campaign operations."/></div><section className="section"><div className="container-inner"><MobileDashboard/><IntelligenceDemo/></div></section><ConsultationBanner/></>}
